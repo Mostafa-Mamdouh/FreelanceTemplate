@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>true</runOnBuild>
+    <!--Use absolute path in the generated CSS files. By default, the URLs are relative to generated bundled CSS file.-->
+    <adjustRelativePaths>true</adjustRelativePaths>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/Content/css/dore.light.redruby.min.css</file>
+    <file>/Content/css/bootstrap-datepicker.css</file>
+    <file>/Content/css/dropzone.css</file>
+    <file>/Content/css/bootstrap.min.css</file>
+    <file>/Content/css/bootstrap2-toggle.css</file>
+    <!--<file>/Content/SmartAdmin/css/demo.min.css</file>
+      <file>/Content/SmartAdmin/css/font-awesome.min.css</file>
+      <file>/Content/SmartAdmin/css/invoice.min.css</file>
+      <file>/Content/SmartAdmin/css/lockscreen.min.css</file>
+      <file>/Content/SmartAdmin/css/smartadmin-production.min.css</file>
+      <file>/Content/SmartAdmin/css/smartadmin-rtl.min.css</file>
+      <file>/Content/SmartAdmin/css/smartadmin-skins.min.css</file>-->
+    <file>/Content/css/panel.css</file>
+    <file>/Content/css/chosen.css</file>
+    <file>/Content/css/jquery.multiselect.css</file>
+    <file>/Content/css/VariablesPopup.css</file>
+    <!--<file>/Content/css/application.css</file>-->
+    <file>/Content/js/libs/PivotTable/pivot.min.css</file>
+    <file>/Content/css/daterangepicker.css</file>
+    <!--<file>/Content/css/jquery-ui.css</file>-->
+  </files>
+</bundle>

@@ -1,0 +1,92 @@
+.navbar {
+  padding: 0 61px;
+  background-color: #022a52 !important;
+  height: 75px;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+  }
+  .custom-logo {
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 40px;
+    max-height: 40px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    position: relative;
+    margin-right: 15px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+  }
+  .navbar-nav {
+    margin-left: 120px;
+    @media (max-width: 1199.98px) {
+      margin-left: 60px;
+    }
+    @media (max-width: 991.98px) {
+      margin-left: 10px;
+    }
+  }
+  .nav-item.nav-link {
+    margin-left: 40px;
+
+    @media (max-width: 991.98px) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+}
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: cornflowerblue;
+}
+.nav-item {
+  cursor: pointer !important;
+  padding-left: 10px;
+
+  @media (max-width: 991.98px) {
+    font-size: 14px;
+  }
+}
+.bell {
+  background-color: rgb(235, 100, 100);
+  color: azure;
+  position: relative;
+  margin-right: 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 11px;
+    right: 11px;
+    border: 2px solid #eb6464;
+  }
+}
+
+.hon {
+  font-size: 17px;
+  margin-right: 7px;
+}

@@ -1,0 +1,141 @@
+.wrapper {
+  width: 1200px;
+  margin: 40px auto;
+  background-color: #ddd;
+  min-height: 2000px;
+}
+.custom-table {
+  user-select: none;
+  margin: 0 35px;
+  padding: 10px;
+  overflow-x: auto;
+  min-height: 400px;
+  .table-header,
+  .table-row {
+    display: flex;
+    border-radius: 12px;
+    min-width: calc(120px * 9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  .table-header {
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  .table-row {
+    background-color: #fff;
+    margin-bottom: 15px;
+  }
+  .table-head,
+  .table-data {
+    width: 100%;
+    min-width: 120px;
+    max-width: calc((100vw - 70px) / 9);
+    padding: 20px 15px;
+    font-size: 1rem;
+    font-weight: normal;
+    user-select: none;
+  }
+  .name {
+    font-weight: bold;
+    color: #022a52;
+  }
+  .download {
+    background-color: #dbe4f4;
+    color: cornflowerblue;
+    font-size: 5px;
+  }
+
+  .table-head {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    user-select: none;
+    .table-head_sort {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .table-row {
+    margin-bottom: 15px;
+    background-color: #fff;
+  }
+}
+.customize-table {
+  user-select: none;
+  margin: 0 35px;
+  padding: 10px;
+  overflow-x: auto;
+  min-height: 400px;
+  .table-header,
+  .table-row {
+    display: flex;
+    border-radius: 12px;
+    min-width: calc(120px * 6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  .table-header {
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  .table-row {
+    background-color: #fff;
+    margin-bottom: 15px;
+  }
+  .table-head,
+  .table-data {
+    width: 100%;
+    min-width: 120px;
+    max-width: calc((100vw - 70px) / 6);
+    padding: 20px 15px;
+    font-size: 1rem;
+    font-weight: normal;
+    user-select: none;
+  }
+  .name {
+    font-weight: bold;
+    color: #022a52;
+  }
+  .download {
+    background-color: #dbe4f4;
+    color: cornflowerblue;
+    font-size: 5px;
+  }
+
+  .table-head {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    .table-head_sort {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .table-row {
+    margin-bottom: 15px;
+    background-color: #fff;
+  }
+}
+
+#search {
+  border: none;
+  background-color: #e9ecef;
+}
+
+.temp {
+  border-radius: 5px !important;
+  background-color: cornflowerblue;
+  border: aliceblue;
+}
+.head {
+  font-size: x-large;
+  font-weight: bolder;
+  color: #022a52;
+}

@@ -1,0 +1,266 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <br />
+
+      <div class="custom-table">
+        <div class="form-row">
+          <div class="col-md-3 mb-2">
+            <label class="control-label head">My Approvals</label>
+          </div>
+          <div class="col-md-6 mb-2"></div>
+          <div class="col-md-3 mb-2">
+            <div class="input-group">
+              <div class="input-group-append">
+                <button class="btn temp btn-secondary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+              <input
+                id="search"
+                (keyup)="onSearch()"
+                type="text"
+                class="form-control"
+                placeholder="Search for invoice…"
+                aria-label="search"
+                #search
+              />
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="table-header">
+          <div class="table-head" on>
+            Name
+            <span
+              *ngIf="nameOrder == 'desc'"
+              (click)="onSort('invoiceNumberAsc', 'nameOrder', 'asc')"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('invoiceNumberDesc', 'nameOrder', 'desc')"
+              *ngIf="nameOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">
+            Date
+            <span
+              (click)="onSort('invoiceDateAsc', 'dateOrder', 'asc')"
+              *ngIf="dateOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('invoiceDateDesc', 'dateOrder', 'desc')"
+              *ngIf="dateOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">
+            Vendor
+            <span
+              (click)="onSort('agencyAsc', 'agencyOrder', 'asc')"
+              *ngIf="vendorOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('agencyDesc', 'agencyOrder', 'desc')"
+              *ngIf="vendorOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">
+            Agency
+            <span
+              (click)="onSort('agencyAsc', 'agencyOrder', 'asc')"
+              *ngIf="agencyOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('agencyDesc', 'agencyOrder', 'desc')"
+              *ngIf="agencyOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">
+            B.U
+            <span
+              (click)="onSort('buAsc', 'buOrder', 'asc')"
+              *ngIf="buOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('buDesc', 'buOrder', 'desc')"
+              *ngIf="buOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">
+            Amount
+            <span
+              (click)="onSort('amountAsc', 'amountOrder', 'asc')"
+              *ngIf="amountOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('amountDesc', 'amountOrder', 'desc')"
+              *ngIf="amountOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+
+          <div class="table-head">
+            Status
+            <span
+              (click)="onSort('statusAsc', 'statusOrder', 'asc')"
+              *ngIf="statusOrder == 'desc'"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onSort('statusDesc', 'statusOrder', 'desc')"
+              *ngIf="statusOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">Download</div>
+          <div class="table-head">Approval</div>
+        </div>
+        <div class="table-body">
+          <div *ngFor="let invoice of invoices" class="table-row">
+            <div class="table-data name">{{ invoice.invoiceNumber }}</div>
+            <div class="table-data">{{ invoice.invoiceDate | date }}</div>
+            <div class="table-data">{{ invoice.vendorName }}</div>
+            <div class="table-data">{{ invoice.agencyName }}</div>
+            <div class="table-data">{{ invoice.clientBUName }}</div>
+            <div class="table-data">{{ invoice.amount | currency }}</div>
+            <div class="table-data">
+              <a href="#">{{ invoice.invoiceStatusName }}</a>
+            </div>
+            <div class="table-data">
+              <button class="btn download">
+                <i-bs name="download"> </i-bs>
+              </button>
+            </div>
+            <div class="table-data">
+              <button class="btn download">
+                <i-bs name="check2"> </i-bs>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="xs-mb-50 xs-mt-40 pull-right">
+          <app-pager
+            [pageSize]="invoiceParams.pageSize"
+            [totalCount]="totalCount"
+            (pageChanged)="onPageChanged($event)"
+          ></app-pager>
+        </div>
+        <div class="xs-mb-50 xs-mt-40 pull-left">
+          <app-paging-header
+            [pageNumber]="this.invoiceParams.pageNumber"
+            [pageSize]="this.invoiceParams.pageSize"
+            [totalCount]="totalCount"
+          ></app-paging-header>
+        </div>
+      </div>
+
+      <br />
+      <div class="customize-table">
+        <div class="form-row">
+          <div class="col-md-3 mb-2">
+            <label class="control-label head">Latest Billing </label>
+          </div>
+          <div class="col-md-6 mb-2"></div>
+          <div class="col-md-3 mb-2"></div>
+        </div>
+
+        <br />
+
+        <div class="table-header">
+          <div class="table-head" on>
+            Period
+            <span
+              *ngIf="periodOrder == 'desc'"
+              (click)="onBilingSort('Asc', 'periodOrder', 'asc')"
+              class="table-head_sort"
+            >
+              -&darr;</span
+            >
+            <span
+              (click)="onBilingSort('Desc', 'periodOrder', 'desc')"
+              *ngIf="periodOrder == 'asc'"
+              class="table-head_sort"
+            >
+              -&uarr;</span
+            >
+          </div>
+          <div class="table-head">Billing</div>
+          <div class="table-head">Approved</div>
+          <div class="table-head">Paid</div>
+          <div class="table-head">Balance</div>
+          <div class="table-head">Detals</div>
+        </div>
+        <div class="table-body">
+          <div *ngFor="let biling of bilings" class="table-row">
+            <div class="table-data name">
+              {{ biling.invoiceMonth }} {{ biling.invoiceYear }}
+            </div>
+            <div class="table-data">{{ biling.totalBilling | currency }}</div>
+            <div class="table-data">{{ biling.totalApproved | currency }}</div>
+            <div class="table-data">{{ biling.totalPaid | currency }}</div>
+            <div class="table-data">
+              {{ biling.totalApproved - biling.totalPaid | currency }}
+            </div>
+            <div class="table-data">
+              <a href="#">View Invoices</a>
+            </div>
+          </div>
+        </div>
+        <div class="xs-mb-50 xs-mt-40 pull-right">
+          <app-pager
+            [pageSize]="invoiceParams.pageSize"
+            [totalCount]="totalCount"
+            (pageChanged)="onPageChanged($event)"
+          ></app-pager>
+        </div>
+        <div class="xs-mb-50 xs-mt-40 pull-left">
+          <app-paging-header
+            [pageNumber]="this.invoiceParams.pageNumber"
+            [pageSize]="this.invoiceParams.pageSize"
+            [totalCount]="totalCount"
+          ></app-paging-header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

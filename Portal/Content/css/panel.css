@@ -1,0 +1,401 @@
+﻿/****************************panel box**************************/
+
+.panel-footer {
+    padding: 5px 15px;
+}
+
+.panel-items{
+    float:right;
+}
+
+ @media (max-width: 420px) {
+    .panel-items div {
+        margin-top: 5px !important;
+    }
+}
+
+.panel-expandicon:after {
+    content:"\f078";
+}
+
+.panel-heading .collapsed:after {
+    content:"\f077";
+}
+
+.MiddlePanel{
+    display:block;
+    padding:0px;
+}
+
+.Expend{
+    line-height: 1.3;
+    margin-left:10px;
+}
+.Expend i{
+    font-size: 13px !important;
+}
+
+.panel-heading{
+    height: 52px;
+    font-size: 15px;
+    color: #76787b;
+    border: none !important;
+    border-radius: 20px 20px 0px 0px;
+    padding: 12px 0px 0px 0px;
+    border-bottom: 1px solid #f5f6f7 !important;
+}
+
+.panel-title {
+    float:left;
+    font-size: 17px;
+    color: #69737A;
+    text-overflow:ellipsis;
+    width:auto;
+    white-space:nowrap;
+    overflow:hidden;
+    min-height:14px;
+    overflow: unset;
+}
+
+.panel-fullscreen {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow:hidden;
+}
+
+.panel-refreshpanelicon{
+    color: #8a8a8a;
+    font-size: 11px;
+    float: right;
+    cursor: pointer;
+    padding-right:10px;
+}
+
+
+.panel-descicon{
+   font-size: 8px;
+    float: right;
+    cursor: pointer;
+    width:16px;
+    height:16px;
+    text-align:center;
+    color: #ffffff;
+    background:#BAC4CE;
+    border-radius:10px;
+    padding-top:4px;
+    margin-right:4px;
+}
+
+.panel-descicon:after {
+    content:"\f129";
+}
+
+.panel-descicon:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panel-fullscreenicon{
+    font-size: 8px;
+    float: right;
+    cursor: pointer;
+    width:16px;
+    height:16px;
+    text-align:center;
+    color: #ffffff;
+    background:#BAC4CE;
+    border-radius:10px;
+    padding-top:4px;
+}
+
+.panel-fullscreenicon:after {
+    content:"\f065";
+}
+
+.fullscreened:after {
+    content:"\f066";
+}
+
+.panel-fullscreenicon:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panel-spinbutton{
+    color: #8a8a8a;
+    font-size: 23px;
+    float: right;
+    background:#e1e1e1;
+    text-align:center;
+    margin-right:5px;
+}
+
+.panel-spinbutton::after {
+    content: "\f013";
+}
+
+.panel-settingbutton{
+    font-size: 10px;
+    float: right;
+    cursor: pointer;
+    padding-top:7px;
+    width:23px;
+    height:100%;
+    text-align:center;
+    /*margin-right:1px;*/
+}
+
+.panel-settingbutton::after {
+    content: "\f0ce";
+}
+
+.panel-settingbutton:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panel-printbutton{
+    font-size: 10px;
+    float: right;
+    cursor: pointer;
+    padding-top:7px; 
+    width:23px;
+    height:100%;
+    text-align:center;
+    /*margin-right:1px;*/
+}
+
+.panel-printbutton::after {
+    content: "\f019";
+}
+
+.panel-printbutton:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panel-hidebutton{
+    font-size: 10px;
+    float: right;
+    cursor: pointer;
+    padding-top:7px; 
+    width:23px;
+    height:100%;
+    text-align:center;
+    /*margin-right:1px;*/
+}
+
+.panel-hidebutton::after {
+    content: "\f06e";
+}
+
+.panel-hidedbutton:after {
+    content: "\f070";
+}
+
+.panel-hidebutton:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panel-drilldownicon{
+    color: #808B9C;
+    font-size: 14px;
+    cursor: pointer;
+    content:"\f150";
+    font: normal normal normal 14px/1 FontAwesome;
+    text-align:center;
+}
+
+.panel-drilldownicon:after {
+    content:"\f150";
+}
+
+.panel-sortbutton{
+    font-size: 10px;
+    float: right;
+    cursor: pointer;
+    padding-top:7px;
+    width:23px;
+    height:100%;
+    text-align:center;
+    /*margin-right:1px;*/
+}
+
+.panel-sortbutton::after {
+    content: "\f161";
+}
+
+.panel-sortedbutton:after {
+    content: "\f160";
+}
+
+.panel-sortbutton:hover {
+    background:#3fc2d2;
+    color: #fff;
+}
+
+.panels, .nopadding{
+    padding:0px !important;
+}
+
+/*.panel-default{
+    height:100%;
+}*/
+
+.floating-left{
+    float:left;
+}
+
+.floating-right{
+    float:right;
+}
+
+.panel-fullheight{
+    position:relative;
+    display:flexbox;
+}
+
+.alignleft{
+    text-align:left;
+}
+
+.alignright{
+    text-align:right;
+}
+
+.btn-xs{
+    font-size:10px !important;
+}
+
+
+.panel .dropdown-menu {
+    min-width: 95px !important;
+    border-bottom:none !important;
+    background:#fff !important;
+    left: auto!important;
+    padding:0 !important;
+    right: 0 !important;
+    top:30px;
+    font-family:MontserratRegular;
+    font-size:12px;
+    margin:-3px !important;
+}
+
+.panel .dropdown-menu .divider {
+    background:#ccc !important;
+    margin-bottom:0 !important;
+}
+
+.panel .dropdown-menu > li > a > i {
+    padding-left:0px !important;
+    padding-right:10px !important;
+}
+
+.panel .dropdown-menu > li > a{
+    padding: 6px 15px !important;
+}
+
+.panel .dropdown-menu > li >a:hover{
+    background:none !important;
+    color:#434343 !important;
+}
+
+.viewpanel {
+    padding-bottom: 20px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.viewpanelfull #panel.panel {
+    overflow-x: hidden;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.viewpanelfull .panel-body {
+    /*height: 100% !important;*/
+}
+
+.viewpanelfull {
+    display: block;
+    padding: 0;
+    position: fixed !important;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.border{
+    border: solid 1px #CCC !important;
+}
+
+.panel {
+    box-shadow: none;
+}
+
+.panel-filter {
+    /*margin-left: 30px !important;*/
+}
+
+#panel {
+    padding: 0 !important;
+}
+
+.nodata {
+    top: calc(50% - 10px);
+    position: absolute;
+    left: calc(50% - 150px);
+}
+
+
+.widget {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125) !important;
+    border-radius: .25rem !important;
+    box-shadow: 5px 1px 20px 0 rgba(0,0,0,.2) !important;
+}
+
+.widget-title {
+    font-size: 1rem;
+}
+
+.landingPage-section-title {
+    font-size: 1.2rem;
+}
+
+.icon-export {
+    background-image: url("../../img/icon-excel.jpg");
+    background-size: 13px;
+    background-position: center;
+}
+
+.dashboard-checkbox-setting {
+    position: relative;
+    display: inline-block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.dashboard.dropdown-menu {
+    font-size: .76rem;
+}
+
+@media (max-width: 767px) {
+.unsettledBalance-section {
+        padding-left: 0px !important;
+        padding-top: 10px;
+    }
+}
